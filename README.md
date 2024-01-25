@@ -1,4 +1,6 @@
 # 42KL-Piscine-Jan-2024
-Hi there! I have no idea on what to type here!
+Shell00, Shell01, c00, c01, c02, c03, c04, c05
 
-Just gonna use this repo to deposit my work at 42KL's Piscine in January 2024.
+Missing/incomplete exercises:
+
+Shell01: ex07, ex08
