@@ -6,7 +6,7 @@
 /*   By: bryaloo <bryaloo@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 14:47:44 by bryaloo           #+#    #+#             */
-/*   Updated: 2024/01/25 17:21:01 by bryaloo          ###   ########.fr       */
+/*   Updated: 2024/01/25 18:47:46 by bryaloo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	ft_iterative_factorial(int nb)
 	return (result);
 }
 
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -41,3 +42,4 @@ int	main(void)
 	printf("Factorial of %d: %d\n", num2, ft_iterative_factorial(num2));
 	printf("Factorial of %d: %d\n", num3, ft_iterative_factorial(num3));
 }
+*/

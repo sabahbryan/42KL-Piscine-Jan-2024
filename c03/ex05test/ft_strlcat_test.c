@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat_test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bryaloo <bryaloo@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 20:30:40 by bryaloo           #+#    #+#             */
-/*   Updated: 2024/01/25 23:03:49 by bryaloo          ###   ########.fr       */
+/*   Created: 2024/01/25 21:33:59 by bryaloo           #+#    #+#             */
+/*   Updated: 2024/01/25 22:19:30 by bryaloo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
+#include <string.h>
 
 unsigned int    ft_strlcat(char *dest, char *src, unsigned int size)
 {
@@ -37,9 +38,39 @@ unsigned int    ft_strlcat(char *dest, char *src, unsigned int size)
 	return dest_len + src_len;
 }
 
-#include <stdio.h>
-
-int main(void)
+void    doc_strlcat(void)
 {
+    char    dest[20] = "Hello";
+    char    *src;
+    unsigned int    res;
+    unsigned int    size;
 
+    src = "World";
+    size = 4;
+    printf("\nExpected:\nDest Before: %s\n", dest);
+    res = strlcat(dest, src, size);
+    printf("Dest After: %s\nSrc: %s\n", dest, src);
+    printf("Size: %i\nRes: %u\n", size, res);
+}
+
+void    test_strlcat(void)
+{
+    char    dest[20] = "Hello";
+    char    *src;
+    unsigned int    res;
+    unsigned int    size;
+
+    src = "World";
+    size = 4;
+    printf("\nft_strlcat:\nDest Before: %s\n", dest);
+    res = ft_strlcat(dest, src, size);
+    printf("Dest After: %s\nSrc: %s\n", dest, src);
+    printf("Size: %i\nRes: %u\n\n", size, res);
+}
+
+int    main(void)
+{
+    doc_strlcat();
+    test_strlcat();
+    return (0);
 }
