@@ -1,0 +1,19 @@
+All commands are separated by "|"
+
+#concatenating
+echo "$FT_NBR1 + $FT+NBR2"
+
+# Substitute FT_NBR1
+tr "\'\\\\\"?\!" '01234')
+
+# Substitute FT_NBR2
+tr 'mcdoc' '01234'
+
+Prepare expression for bc
+"ibase=5; obase=23;
+
+#evaluate expression
+result= bc
+
+#final output
+tr '0123456789ABC' 'gtio luSnemf'

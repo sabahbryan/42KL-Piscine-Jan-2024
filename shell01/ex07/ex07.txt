@@ -1,0 +1,67 @@
+#All commands are separated by "|"
+
+cat /etc/passwd | grep -v '^#' | awk 'FNR % 2 == 0'| cut -d ':' -f1 | rev | sort -r | awk 'FNR >= ENVIRON["FT_LINE1"] && FNR <= ENVIRON["FT_LINE2"]' | tr '\n' ',' | sed 's/,/, /g' | sed 's/, $/./'
+
+# Storing cat output
+cat /etc/passwd 
+
+# removes comments
+(.) grep -v '^#'
+
+# filters even lines
+(..) awk 'FNR % 2 == 0'
+
+# filters login names
+(...) cut -d ':' -f1
+
+# reverse login names
+(....) rev
+
+# sorts in reverse alphabet
+(.....) sort -r
+
+#filters between FT_LINE1 and FT_LINE2
+(......) awk 'FNR >= ENVIRON[FT_LINE1] && FNR <= ENVIRON[FT_LINE2]' 
+/* CODE HAS ISSUES HERE */
+
+#replace newlines with commas
+(.......) tr '\n' ',' | sed 's/,/, /g'
+
+#replaces last comma to dot
+(........) sed 's/, $/./'
+
+===CHATGPT===
+
+Let's break down the given command step by step:
+
+cat /etc/passwd:
+Displays the content of the /etc/passwd file, which contains information about user accounts.
+
+grep -v '^#':
+Excludes lines starting with #, filtering out comment lines.
+
+awk 'FNR % 2 == 0':
+Selects only the lines with an even line number, effectively filtering out every other line.
+
+cut -d ':' -f1:
+Uses cut to split each line into fields using : as the delimiter and extracts the first field. In the context of the /etc/passwd file, the first field is the username.
+
+rev:
+Reverses each line.
+
+sort -r:
+Sorts the lines in reverse order (descending order).
+
+awk 'FNR >= ENVIRON["FT_LINE1"] && FNR <= ENVIRON["FT_LINE2"]':
+Uses awk to print lines within a specified range defined by FT_LINE1 and FT_LINE2. These values should be set in the environment before running the command.
+
+tr '\n' ',':
+Translates newline characters to commas.
+
+sed 's/,/, /g':
+Uses sed to add a space after each comma.
+
+sed 's/, $/./':
+Uses sed to replace the last comma with a period.
+
+In summary, this command processes the /etc/passwd file to extract usernames, reverse, sort, and format them within a specified range, and then outputs a comma-separated list with spaces and a period at the end. The actual output depends on the content of the /etc/passwd file and the values of FT_LINE1 and FT_LINE2.

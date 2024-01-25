@@ -1,0 +1,20 @@
+bryaloo@u82z01s05 shell01 % find . -type f -o -type d | wc -l
+      82
+bryaloo@u82z01s05 shell01 % find . -type f -o -type d | wc -l | bc
+82
+bryaloo@u82z01s05 shell01 % find . -type f -o -type d | wc -l | tr -d ' '
+82
+bryaloo@u82z01s05 shell01 % find . | wc -l | sed 's/ //g'
+82
+------ To test
+
+find . -type f | wc -l | tr -d ' '
+
+find . -print | awk 'END {print NR}'
+
+find .  | wc -l 
+
+
+NOTES_____
+
+-type command cannot be found
