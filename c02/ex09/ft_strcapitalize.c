@@ -6,7 +6,7 @@
 /*   By: bryaloo <bryaloo@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 13:39:22 by bryaloo           #+#    #+#             */
-/*   Updated: 2024/01/23 19:26:35 by bryaloo          ###   ########.fr       */
+/*   Updated: 2024/01/27 19:21:17 by bryaloo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,24 @@
 
 char	*ft_strcapitalize(char *str)
 {
-	unsigned int	i;
+	unsigned int	word;
+	unsigned int	new_word;
 	char			c;
-	int				new_word;
 
-	i = 0;
+	word = 0;
 	new_word = 1;
-	while (str[i] != '\0')
+	while (str[word] != '\0')
 	{
-		c = str[i];
+		c = str[word];
 		if (new_word == 1 && c >= 'a' && c <= 'z')
-			str[i] = str[i] - 32;
+			str[word] = str[word] - 32;
 		else if (new_word == 0 && c >= 'A' && c <= 'Z')
-			str[i] = str[i] + 32;
+			str[word] = str[word] + 32;
 		if (c < '0' || (c > '9' && c < 'A') || (c > 'Z' && c < 'a') || c > 'z')
 			new_word = 1;
 		else
 			new_word = 0;
-		i++;
+		word++;
 	}
 	return (str);
 }

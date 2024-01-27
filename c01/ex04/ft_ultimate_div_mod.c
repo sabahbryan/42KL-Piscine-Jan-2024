@@ -6,7 +6,7 @@
 /*   By: bryaloo <bryaloo@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 21:18:37 by bryaloo           #+#    #+#             */
-/*   Updated: 2024/01/23 16:33:43 by bryaloo          ###   ########.fr       */
+/*   Updated: 2024/01/27 17:40:00 by bryaloo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	ft_ultimate_div_mod(int *a, int *b)
 {
-	int	i;
+	int	tmp;
 
-	i = *a;
-	*a = i / *b;
-	*b = i % *b;
+	tmp = *a;
+	*a = tmp / *b;
+	*b = tmp % *b;
 }
 
 /*

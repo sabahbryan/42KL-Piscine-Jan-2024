@@ -1,45 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
+/*   ft_print_combn.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bryaloo <bryaloo@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/23 13:36:07 by bryaloo           #+#    #+#             */
-/*   Updated: 2024/01/27 18:08:26 by bryaloo          ###   ########.fr       */
+/*   Created: 2024/01/27 16:05:11 by bryaloo           #+#    #+#             */
+/*   Updated: 2024/01/27 16:08:36 by bryaloo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	swap(int *a, int *b)
+void	ft_putchar(char c)
 {
-	int	tmp = *a;
-	*a = *b;
-	*b = tmp;
+	write(1, &c, 1);
 }
 
-void	ft_sort_int_tab(int *tab, int size)
+void	ft_print_combn(int n)
 {
-	int	i;
-	int	j;
 
-	i = 1;
-	while (i < size)
-	{
-		j = i;
-		while (j > 0 && *(tab + j - 1) > *(tab + j))
-		{
-			swap(tab + j, tab + j - 1);
-			j--;
-		}
-		i++;
-	}
 }
-
-#include <stdio.h>
 
 int	main(void)
 {
-
+	ft_print_combn();
+	write(1, "\n", 1);
 }
