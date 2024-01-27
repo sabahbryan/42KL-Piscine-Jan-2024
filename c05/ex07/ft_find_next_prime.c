@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bryaloo <bryaloo@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/26 21:48:11 by bryaloo           #+#    #+#             */
-/*   Updated: 2024/01/27 11:59:19 by bryaloo          ###   ########.fr       */
+/*   Created: 2024/01/27 12:32:20 by bryaloo           #+#    #+#             */
+/*   Updated: 2024/01/27 12:55:41 by bryaloo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,25 +30,24 @@ int	ft_is_prime(int nb)
 	return (1);
 }
 
+int	ft_find_next_prime(int nb)
+{
+	int	j;
+
+	j = nb;
+	if (j < 2)
+		return (2);
+	while (!ft_is_prime(j))
+		j++;
+	return (j);
+}
+
 #include <stdio.h>
 
 int	main(void)
 {
-	int	i = 7;
-	int	j = 12;
-	int	k = -29;
+	int	next;
 
-	if (ft_is_prime(i))
-		printf("%d is prime? Y\n", i);
-	else
-		printf("%d is prime? N\n", i);
-	if (ft_is_prime(j))
-		printf("%d is prime? Y\n", j);
-	else
-		printf("%d is prime? N\n", j);
-	if (ft_is_prime(k))
-		printf("%d is prime? Y\n", k);
-	else
-		printf("%d is prime? N\n", k);
-	return (0);
+	next = 100000;
+	printf("Next prime after %d: %d\n", next, ft_find_next_prime(next));
 }
