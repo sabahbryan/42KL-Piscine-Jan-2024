@@ -6,7 +6,7 @@
 /*   By: bryaloo <bryaloo@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 21:49:02 by bryaloo           #+#    #+#             */
-/*   Updated: 2024/01/24 21:58:32 by bryaloo          ###   ########.fr       */
+/*   Updated: 2024/01/27 22:23:40 by bryaloo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,21 @@ void	ft_putnbr(int nb)
 		ft_putchar(nb + '0');
 }
 
+/*
 int	main(void)
 {
-	int	num;
+	int	num1;
+	int	num2;
+	int	num3;
 
-	num = -12345;
-	ft_putnbr(num);
+	num1 = 12345;
+	num2 = -9876;
+	num3 = -2147483648;
+	ft_putnbr(num1);
+	write(1, "\n", 1);
+	ft_putnbr(num2);
+	write(1, "\n", 1);
+	ft_putnbr(num3);
+	write(1, "\n", 1);
 }
+*/
