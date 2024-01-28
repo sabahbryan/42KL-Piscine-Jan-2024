@@ -6,7 +6,7 @@
 /*   By: bryaloo <bryaloo@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 11:39:06 by bryaloo           #+#    #+#             */
-/*   Updated: 2024/01/26 12:08:00 by bryaloo          ###   ########.fr       */
+/*   Updated: 2024/01/28 17:57:58 by bryaloo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int	ft_recursive_power(int nb, int power)
 		return (nb * ft_recursive_power(nb, power - 1));
 }
 
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -37,3 +38,4 @@ int	main(void)
 	printf("%d raised by power %d: %d\n", e, v, ft_recursive_power(e, v));
 	printf("%d raised by power %d: %d\n", f, w, ft_recursive_power(f, w));
 }
+*/

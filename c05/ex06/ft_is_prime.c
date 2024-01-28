@@ -6,7 +6,7 @@
 /*   By: bryaloo <bryaloo@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 21:48:11 by bryaloo           #+#    #+#             */
-/*   Updated: 2024/01/27 11:59:19 by bryaloo          ###   ########.fr       */
+/*   Updated: 2024/01/28 18:06:48 by bryaloo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int	ft_is_prime(int nb)
 	return (1);
 }
 
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -52,3 +53,4 @@ int	main(void)
 		printf("%d is prime? N\n", k);
 	return (0);
 }
+*/

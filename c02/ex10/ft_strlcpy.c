@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bryaloo <bryaloo@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/23 14:24:34 by bryaloo           #+#    #+#             */
-/*   Updated: 2024/01/27 19:03:01 by bryaloo          ###   ########.fr       */
+/*   Created: 2024/01/28 16:17:09 by bryaloo           #+#    #+#             */
+/*   Updated: 2024/01/28 18:24:35 by bryaloo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,21 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 
 	count = 0;
 	src_length = 0;
-	while (src[count] != '\0' && count < size - 1)
+	while (src[src_length] != '\0' && src_length < size - 1)
 	{
-		dest[count] = src[count];
+		dest[count] = src[src_length];
 		count++;
+		src_length++;
 	}
+	dest[count] = '\0';
 	while (src[src_length] != '\0')
 		src_length++;
 	return (src_length);
 }
 
-/*
+
 #include <stdio.h>
+#include <string.h>
 
 int	main(void)
 {
@@ -41,5 +44,12 @@ int	main(void)
 	len = ft_strlcpy(dest, src, sizeof(dest));
 	printf("Length of source: %u\n", len);
 	printf("Modified destination: %s\n", dest);
+
+	char	src1[] = "Hello";
+	char	dest1[] = "World!";
+	unsigned int	len1;
+
+	len1 = strlcpy(dest1, src1, sizeof(dest1));
+	printf("Length of source: %u\n", len1);
+	printf("Modified destination: %s\n", dest1);
 }
-*/

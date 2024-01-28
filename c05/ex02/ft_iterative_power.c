@@ -6,7 +6,7 @@
 /*   By: bryaloo <bryaloo@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 11:11:18 by bryaloo           #+#    #+#             */
-/*   Updated: 2024/01/26 11:46:43 by bryaloo          ###   ########.fr       */
+/*   Updated: 2024/01/28 17:55:15 by bryaloo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	ft_iterative_power(int nb, int power)
 	return (result);
 }
 
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -44,3 +45,4 @@ int	main(void)
 	printf("%d raised by power %d: %d\n", b, y, ft_iterative_power(b, y));
 	printf("%d raised by power %d: %d\n", c, z, ft_iterative_power(c, z));
 }
+*/

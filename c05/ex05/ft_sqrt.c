@@ -6,7 +6,7 @@
 /*   By: bryaloo <bryaloo@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 12:50:32 by bryaloo           #+#    #+#             */
-/*   Updated: 2024/01/26 22:12:55 by bryaloo          ###   ########.fr       */
+/*   Updated: 2024/01/28 18:06:11 by bryaloo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int	ft_sqrt(int nb)
 	return (0);
 }
 
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -43,3 +44,4 @@ int	main(void)
 	printf("sqrt %d = %d\n", b, ft_sqrt(b));
 	printf("sqrt %d = %d\n", c, ft_sqrt(c));
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: bryaloo <bryaloo@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 12:21:47 by bryaloo           #+#    #+#             */
-/*   Updated: 2024/01/25 15:24:27 by bryaloo          ###   ########.fr       */
+/*   Updated: 2024/01/28 17:49:04 by bryaloo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,16 +38,15 @@ int	ft_atoi(char *str)
 /*
 #include <stdio.h>
 
-int	main(int argc, char **argv)
+int	main(void)
 {
-	int	output;
+	char	*str1;
+	char	*str2;
 
-	if (argc == 2)
-	{
-		output = ft_atoi(argv[1]);
-		printf("%d\n", output);
-	}
+	str1 = " ---+--+1234ab567";
+	str2 = "\f\n\r\t\v +-+-+-42069";
+	printf("%d\n", ft_atoi(str1));
+	printf("%d\n", ft_atoi(str2));
 	return (0);
 }
 */
-//input test " ---+--+1234ab567"
