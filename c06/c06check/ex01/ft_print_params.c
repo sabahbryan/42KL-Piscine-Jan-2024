@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bryaloo <bryaloo@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/27 13:12:43 by bryaloo           #+#    #+#             */
-/*   Updated: 2024/01/29 14:12:44 by bryaloo          ###   ########.fr       */
+/*   Created: 2024/01/27 14:30:06 by bryaloo           #+#    #+#             */
+/*   Updated: 2024/01/27 15:15:07 by bryaloo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,23 @@ void	ft_putchar(char c)
 
 int	main(int argc, char **argv)
 {
-	int	p;
+	int	x;
+	int	y;
 
-	p = 0;
-	if (argc > 0)
+	x = 1;
+	if (argc > 1)
 	{
-		while (argv[0][p] != '\0')
+		while (x < argc)
 		{
-			ft_putchar(argv[0][p]);
-			p++;
+			y = 0;
+			while (argv[x][y] != '\0')
+			{
+				ft_putchar(argv[x][y]);
+				y++;
+			}
+			x++;
+			ft_putchar('\n');
 		}
-		ft_putchar('\n');
 	}
 	return (0);
 }

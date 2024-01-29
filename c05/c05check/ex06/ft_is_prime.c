@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bryaloo <bryaloo@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/25 12:21:47 by bryaloo           #+#    #+#             */
-/*   Updated: 2024/01/29 13:37:39 by bryaloo          ###   ########.fr       */
+/*   Created: 2024/01/26 21:48:11 by bryaloo           #+#    #+#             */
+/*   Updated: 2024/01/28 18:06:48 by bryaloo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_atoi(char *str)
+int	ft_is_prime(int nb)
 {
-	int	result;
-	int	sign;
+	int	i;
 
-	result = 0;
-	sign = 1;
-	while (*str == 32 || (*str >= 9 && *str <= 13))
-		str++;
-	while (*str == '-' || *str == '+')
+	i = 2;
+	if (nb < 2)
+		return (0);
+	if (nb == 2)
+		return (1);
+	while (i <= nb / 2)
 	{
-		if (*str == '-')
-			sign *= -1;
-		str++;
+		if (nb % i == 0)
+			return (0);
+		i++;
 	}
-	while (*str >= '0' && *str <= '9')
-	{
-		result = result * 10 + *str - '0';
-		str++;
-	}
-	return (result * sign);
+	return (1);
 }
 
 /*
@@ -40,13 +35,22 @@ int	ft_atoi(char *str)
 
 int	main(void)
 {
-	char	*str1;
-	char	*str2;
+	int	i = 7;
+	int	j = 12;
+	int	k = -29;
 
-	str1 = " ---+--+1234ab567";
-	str2 = "\f\n\r\t\v +-+-+-42069";
-	printf("%d\n", ft_atoi(str1));
-	printf("%d\n", ft_atoi(str2));
+	if (ft_is_prime(i))
+		printf("%d is prime? Y\n", i);
+	else
+		printf("%d is prime? N\n", i);
+	if (ft_is_prime(j))
+		printf("%d is prime? Y\n", j);
+	else
+		printf("%d is prime? N\n", j);
+	if (ft_is_prime(k))
+		printf("%d is prime? Y\n", k);
+	else
+		printf("%d is prime? N\n", k);
 	return (0);
 }
 */

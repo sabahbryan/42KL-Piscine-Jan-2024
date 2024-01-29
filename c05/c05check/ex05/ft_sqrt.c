@@ -1,35 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bryaloo <bryaloo@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/27 13:12:43 by bryaloo           #+#    #+#             */
-/*   Updated: 2024/01/29 14:12:44 by bryaloo          ###   ########.fr       */
+/*   Created: 2024/01/26 12:50:32 by bryaloo           #+#    #+#             */
+/*   Updated: 2024/01/28 18:06:11 by bryaloo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+int	ft_sqrt(int nb)
 {
-	write (1, &c, 1);
-}
+	int	s;
 
-int	main(int argc, char **argv)
-{
-	int	p;
-
-	p = 0;
-	if (argc > 0)
+	s = 1;
+	if (nb > 0)
 	{
-		while (argv[0][p] != '\0')
+		while (s * s <= nb)
 		{
-			ft_putchar(argv[0][p]);
-			p++;
+			if (s * s == nb)
+				return (s);
+			if (s > 46340)
+				return (0);
+			s++;
 		}
-		ft_putchar('\n');
 	}
 	return (0);
 }
+
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	int	a = 25;
+	int	b = -16;
+	int	c = 8;
+
+	printf("sqrt %d = %d\n", a, ft_sqrt(a));
+	printf("sqrt %d = %d\n", b, ft_sqrt(b));
+	printf("sqrt %d = %d\n", c, ft_sqrt(c));
+}
+*/

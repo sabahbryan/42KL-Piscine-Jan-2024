@@ -1,38 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bryaloo <bryaloo@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/25 12:21:47 by bryaloo           #+#    #+#             */
-/*   Updated: 2024/01/29 13:37:39 by bryaloo          ###   ########.fr       */
+/*   Created: 2024/01/25 14:47:44 by bryaloo           #+#    #+#             */
+/*   Updated: 2024/01/25 18:47:46 by bryaloo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_atoi(char *str)
+int	ft_iterative_factorial(int nb)
 {
 	int	result;
-	int	sign;
 
-	result = 0;
-	sign = 1;
-	while (*str == 32 || (*str >= 9 && *str <= 13))
-		str++;
-	while (*str == '-' || *str == '+')
+	result = 1;
+	if (nb < 0)
+		return (0);
+	else if (nb <= 1)
+		return (result);
+	while (nb > 0)
 	{
-		if (*str == '-')
-			sign *= -1;
-		str++;
+		result *= nb;
+		nb--;
 	}
-	while (*str >= '0' && *str <= '9')
-	{
-		result = result * 10 + *str - '0';
-		str++;
-	}
-	return (result * sign);
+	return (result);
 }
 
 /*
@@ -40,13 +34,12 @@ int	ft_atoi(char *str)
 
 int	main(void)
 {
-	char	*str1;
-	char	*str2;
+	int	num1 = 5;
+	int	num2 = 0;
+	int	num3 = -3;
 
-	str1 = " ---+--+1234ab567";
-	str2 = "\f\n\r\t\v +-+-+-42069";
-	printf("%d\n", ft_atoi(str1));
-	printf("%d\n", ft_atoi(str2));
-	return (0);
+	printf("Factorial of %d: %d\n", num1, ft_iterative_factorial(num1));
+	printf("Factorial of %d: %d\n", num2, ft_iterative_factorial(num2));
+	printf("Factorial of %d: %d\n", num3, ft_iterative_factorial(num3));
 }
 */
