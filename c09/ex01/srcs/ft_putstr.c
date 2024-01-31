@@ -1,22 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bryaloo <bryaloo@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/30 17:52:14 by bryaloo           #+#    #+#             */
-/*   Updated: 2024/01/31 16:56:39 by bryaloo          ###   ########.fr       */
+/*   Created: 2024/01/21 12:56:36 by bryaloo           #+#    #+#             */
+/*   Updated: 2024/01/23 16:34:26 by bryaloo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_H
-# define FT_H
+#include <unistd.h>
 
-void	ft_putchar(char c);
-void	ft_swap(int *a, int *b);
-void	ft_putstr(char *str);
-int	ft_strlen(char *str);
-int	ft_strcmp(char *s1, char *s2);
+void	ft_putstr(char *str)
+{
+	int	i;
 
-#endif
+	i = 0;
+	while (str[i] != '\0')
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+}
+
+/*
+int	main(void)
+{
+	char	*s1;
+
+	s1 = "Bonjour!";
+	ft_putstr(s1);
+	return (0);
+}
+*/
