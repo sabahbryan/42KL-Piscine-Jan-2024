@@ -6,7 +6,7 @@
 /*   By: bryaloo <bryaloo@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 19:52:03 by bryaloo           #+#    #+#             */
-/*   Updated: 2024/01/30 20:32:55 by bryaloo          ###   ########.fr       */
+/*   Updated: 2024/02/01 18:44:36 by bryaloo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int	ft_ultimate_range(int **range, int min, int max)
 	}
 }
 
+/*
 int	main(void)
 {
 	int	*result;
@@ -63,3 +64,4 @@ int	main(void)
 	free(result);
 	return (0);
 }
+*/
